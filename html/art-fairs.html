@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Blueprint.12 | Art Fairs</title>
+    <meta name="keywords" content="Blueprint.12">
+    <meta name="description" content="Blueprint.12">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="brandLogo">
+            <img src="img/blueprint12-logo.png" alt="blueprint.12 logo">
+            <a href="about.html" class="infoLink">Information</a>
+        </div>
+        <div class="leftNav">
+            <div class="leftNavTop">
+                <p class="leftNavDay">Tuesday – Saturday <span class="dotSml"></span> 11 am - 7 pm</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="artists.html">Artists</a></li>
+                    <li><a href="exhibitions.html">Exhibitions</a></li>
+                    <li><a href="art-fairs.html" class="leftNavActive">Art Fairs</a></li>
+                    <li><a href="platform.html">Platform</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="leftNavBtm">
+                <p class="leftNavMail"><a href="mailto:blueprint2012@gmail.com"
+                        target="_blank">blueprint2012@gmail.com</a></p>
+                <p class="leftNavSocial">
+                    <a href="https://www.instagram.com/blueprint2012/" target="_blank"><img src="img/insta-icon.png" alt="instagram"></a>
+                    <a href="https://www.facebook.com/blueprint2012/" target="_blank"><img src="img/fb-icon.png" alt="facebook"></a>
+                </p>
+                <p class="leftNavCopyright">All rights reserved for Blueprint.12</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="container">
+            <div class="scrollArea">
+
+                <div class="exhibitionsArea">
+                    <div class="exhibitionsGrids">
+                        <div class="exhibitionsGridItem">
+                            <a href="art-fairs-inner.html" class="exhibitionsGridItemInner">
+                                <img src="img/artfairs/artfairs-1.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="exhibitionsGridItem">
+                            <a href="art-fairs-inner.html" class="exhibitionsGridItemInner">
+                                <img src="img/artfairs/artfairs-2.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="exhibitionsGridItem">
+                            <a href="art-fairs-inner.html" class="exhibitionsGridItemInner">
+                                <img src="img/artfairs/artfairs-3.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="exhibitionsGridItem">
+                            <a href="art-fairs-inner.html" class="exhibitionsGridItemInner">
+                                <img src="img/artfairs/artfairs-4.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="exhibitionsGridItem">
+                            <a href="art-fairs-inner.html" class="exhibitionsGridItemInner">
+                                <img src="img/artfairs/artfairs-5.jpg" alt="">
+                            </a>
+                        </div>
+                        
+                    </div> <!-- /.exhibitionsGrids -->
+
+                    <div class="exhibitions-right">
+                        <div class="exhibitions-rightItem">
+                            <div class="exhibitions-rightItemHead">Current</div>
+                            <ul>
+                                <li><a href="#">2020</a></li>
+                            </ul>
+                        </div>
+                        <div class="exhibitions-rightItem">
+                            <div class="exhibitions-rightItemHead">Past</div>
+                            <ul>
+                                <li><a href="#">2019</a></li>
+                                <li><a href="#">2018</a></li>
+                                <li><a href="#">2017</a></li>
+                                <li><a href="#">2016</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div> <!-- /.exhibitionsArea -->
+
+            </div>
+        </section>
+
+    </main>
+    <script src="js/jquery.min.js"> </script>
+    <script src="js/plugin.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+            // init Isotope
+            var $grid = $('.exhibitionsGrids').isotope({
+                itemSelector: '.exhibitionsGridItem',
+                percentPosition: true,
+            });
+            // layout Isotope after each image loads
+            $grid.imagesLoaded().progress( function() {
+                $grid.isotope('layout');
+            });  
+
+        });
+    </script>
+</body>
+
+</html>
